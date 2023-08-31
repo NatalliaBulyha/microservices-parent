@@ -1,0 +1,44 @@
+version: '3.1'
+
+services:
+  product-service:
+    container_name: product-service
+    image: cozyhomeimages/product-service
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb+srv://user:egy4OdPi4Wyrm99k@cluster0.bgj8zvs.mongodb.net/product_db?retryWrites=true&w=majority
+    ports:
+      - '8080:8080'
+
+  yugabyte-db:
+    container_name: yugabyte-db
+    image: yugabytedb/yugabyte:latest
+    environment:
+      - SPRING_DATASOURCE_USERNAME = admin
+      - SPRING_DATASOURCE_PASSWORD = OqTSchvip_ZH-hz7YpYwVs6Wc_Mlij
+      - SPRING_DATASOURCE_URL = jdbc:postgresql://us-east-1.b52152fa-97a4-4ebb-87be-812fdf65a3b0.aws.ybdb.io:5433/postgres?ssl=true&sslmode=verify-full&sslrootcert=review-service/root.crt
+    ports:
+      - '5433:5433'
+
+
+  review-service:
+    container_name: review-service
+    image: cozyhomeimages/review-service
+    environment:
+      - SPRING_DATASOURCE_USERNAME = admin
+      - SPRING_DATASOURCE_PASSWORD = OqTSchvip_ZH-hz7YpYwVs6Wc_Mlij
+      - SPRING_JPA_HIBERNATE_DDL_AUTO = none
+      - SPRING_DATASOURCE_URL = jdbc:postgresql://us-east-1.b52152fa-97a4-4ebb-87be-812fdf65a3b0.aws.ybdb.io:5433/postgres?ssl=true&sslmode=verify-full&sslrootcert=review-service/root.crt
+    ports:
+      - '8082:8082'
+
+  inventory-service:
+    container_name: inventory-service
+    image: cozyhomeimages/inventory-service
+    ports:
+      - 8081:8081
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://us-east-1.1011fee9-16fc-4815-a65b-dc761c359a59.aws.ybdb.io:5433/postgres?ssl=true&sslmode=verify-full&sslrootcert=./root.crt
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: VbZblRhtP62ugQc2IiOXMkLr4aSJTl
+      SPRING_JPA_PROPERTIES_HIBERNATE_DEFAULT_SCHEMA: inventory
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
