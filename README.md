@@ -1,2 +1,2 @@
 # microservices-parent
-combined microservices
+combined services
