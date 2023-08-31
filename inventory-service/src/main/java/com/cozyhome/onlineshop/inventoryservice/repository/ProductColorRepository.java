@@ -1,9 +1,8 @@
-package com.cozyhome.inventory.repository;
+package com.cozyhome.onlineshop.inventoryservice.repository;
 
+import com.cozyhome.onlineshop.inventoryservice.model.ProductColor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import com.cozyhome.inventory.model.ProductColor;
 
 @Repository
 public interface ProductColorRepository extends JpaRepository<ProductColor, Integer>{

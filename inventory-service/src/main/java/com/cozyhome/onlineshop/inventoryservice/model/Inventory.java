@@ -1,6 +1,4 @@
-package com.cozyhome.inventory.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+package com.cozyhome.onlineshop.inventoryservice.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

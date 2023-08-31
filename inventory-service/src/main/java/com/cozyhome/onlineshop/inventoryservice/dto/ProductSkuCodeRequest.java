@@ -1,4 +1,4 @@
-package com.cozyhome.inventory.dto;
+package com.cozyhome.onlineshop.inventoryservice.dto;
 
 import java.util.List;
 

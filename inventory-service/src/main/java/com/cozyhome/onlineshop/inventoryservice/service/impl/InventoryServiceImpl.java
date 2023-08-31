@@ -1,4 +1,4 @@
-package com.cozyhome.inventory.service.impl;
+package com.cozyhome.onlineshop.inventoryservice.service.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,18 +6,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import com.cozyhome.onlineshop.inventoryservice.service.InventoryService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import com.cozyhome.inventory.dto.ColorQuantityStatusDto;
-import com.cozyhome.inventory.dto.ProductColorDto;
-import com.cozyhome.inventory.dto.ProductQuantityStatusDto;
-import com.cozyhome.inventory.dto.ProductSkuCodeRequest;
-import com.cozyhome.inventory.model.Inventory;
-import com.cozyhome.inventory.model.enums.ProductQuantityStatus;
-import com.cozyhome.inventory.repository.InventoryRepository;
-import com.cozyhome.inventory.repository.ProductColorRepository;
-import com.cozyhome.inventory.service.InventoryService;
+import com.cozyhome.onlineshop.inventoryservice.dto.ColorQuantityStatusDto;
+import com.cozyhome.onlineshop.inventoryservice.dto.ProductColorDto;
+import com.cozyhome.onlineshop.inventoryservice.dto.ProductQuantityStatusDto;
+import com.cozyhome.onlineshop.inventoryservice.dto.ProductSkuCodeRequest;
+import com.cozyhome.onlineshop.inventoryservice.model.Inventory;
+import com.cozyhome.onlineshop.inventoryservice.model.enums.ProductQuantityStatus;
+import com.cozyhome.onlineshop.inventoryservice.repository.InventoryRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

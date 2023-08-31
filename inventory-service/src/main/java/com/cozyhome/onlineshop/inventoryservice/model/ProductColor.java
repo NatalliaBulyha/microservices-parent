@@ -1,4 +1,4 @@
-package com.cozyhome.inventory.model;
+package com.cozyhome.onlineshop.inventoryservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

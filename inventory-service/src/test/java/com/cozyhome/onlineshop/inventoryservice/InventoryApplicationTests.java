@@ -1,4 +1,4 @@
-package com.cozyhome.inventory;
+package com.cozyhome.onlineshop.inventoryservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

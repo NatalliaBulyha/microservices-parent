@@ -1,4 +1,4 @@
-package com.cozyhome.inventory.model.enums;
+package com.cozyhome.onlineshop.inventoryservice.model.enums;
 
 import lombok.Getter;
 

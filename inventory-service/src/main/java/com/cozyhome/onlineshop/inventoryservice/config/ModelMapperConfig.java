@@ -1,4 +1,4 @@
-package com.cozyhome.inventory.config;
+package com.cozyhome.onlineshop.inventoryservice.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
